@@ -10,7 +10,7 @@ public class Main {
 
 
         Circle circle = new Circle(3.0);
-        System.out.println("Pole kola wynosi: "+ circle.calculateCircuit());
+        System.out.printf("Pole kola o promeniu %.2f wynosi %.2f",circle.radius,circle.calculateCircuit());
     }
 }
 

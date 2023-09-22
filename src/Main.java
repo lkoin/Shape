@@ -10,7 +10,11 @@ public class Main {
 
 
         Circle circle = new Circle(3.0);
-        System.out.printf("Pole kola o promeniu %.2f wynosi %.2f",circle.radius,circle.calculateCircuit());
+        System.out.printf("Pole kola o promeniu %.2f wynosi : \n %.2f",circle.radius,circle.calculateCircuit());
+
+        Triangle triangle = new Triangle(3.0,5.0);
+        System.out.println("Pole kwadratu wynosi: \n"+triangle.trangleArea());
+        System.out.printf("Dlugosc boku c wynosi: %.2f",triangle.triangleCircuit());
     }
 }
 

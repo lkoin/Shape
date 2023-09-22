@@ -10,7 +10,9 @@ public class Main {
         System.out.println("Wybierz co chcesz obliczyc: ");
         System.out.println("1. Pole kwadratu");
         System.out.println("2. Pole koła");
-        System.out.println("3. Oblicz pole kwadratu prostokątnego oraz bok c");
+        System.out.println("3. Oblicz pole trojkata prostokątnego oraz bok c");
+        System.out.println("4. Oblicz pole trojkata rownobocznego oraz obwod");
+        System.out.println("5. Oblicz pole trojkata rownoramiennego oraz obwod\"");
         System.out.println("0. Wyjscie");
         boolean petla = true;
         while (petla == true) {
@@ -35,16 +37,47 @@ public class Main {
                     triangle.boka = scanner.nextDouble();
                     System.out.println("Podaj dlugosc boku b trojkąta: ");
                     triangle.bokb = scanner.nextDouble();
-                    System.out.println("Pole kwadratu wynosi: \n" + triangle.trangleArea());
+                    System.out.println("Pole kwadratu wynosi: \n" + triangle.sqrtTrangleArea());
                 } else if (wybor==2) {
                     System.out.println("Podaj dlugosc boku a trojkąta: ");
                     triangle.boka = scanner.nextDouble();
                     System.out.println("Podaj dlugosc boku b trojkąta: ");
                     triangle.bokb = scanner.nextDouble();
-                    System.out.printf("Dlugosc boku c wynosi: %.2f", triangle.triangleCircuit());
+                    System.out.printf("Dlugosc boku c wynosi: %.2f", triangle.sqrtTriangleCircuit());
                 }
                 break;
-
+            case 4:
+                System.out.println("1. Oblicz pole");
+                System.out.println("2. Oblicz obwod");
+                int wybor1 = scanner.nextInt();
+                if (wybor1== 1) {
+                    System.out.println("Podaj dlugosc boku a trojkąta: ");
+                    triangle.boka = scanner.nextDouble();
+                    System.out.println("Pole kwadratu wynosi: \n" + triangle.equilateralTriangleArea());
+                } else if (wybor1==2) {
+                    System.out.println("Podaj dlugosc boku trojkąta: ");
+                    triangle.boka = scanner.nextDouble();
+                    System.out.printf("Dlugosc obwodu wynosi: %.2f", triangle.equilateralTriangleCirciut());
+                }
+                break;
+            case 5:
+                System.out.println("1. Oblicz pole");
+                System.out.println("2. Oblicz obwod");
+                int wybor2 = scanner.nextInt();
+                if (wybor2== 1) {
+                    System.out.println("Podaj dlugosc boku a trojkąta: ");
+                    triangle.boka = scanner.nextDouble();
+                    System.out.println("Podaj dlugosc boku b trojkąta: ");
+                    triangle.bokb = scanner.nextDouble();
+                    System.out.println("Pole kwadratu wynosi: \n" + triangle.isoscelesTriangleArea());
+                } else if (wybor2==2) {
+                    System.out.println("Podaj dlugosc boku a trojkąta: ");
+                    triangle.boka = scanner.nextDouble();
+                    System.out.println("Podaj dlugosc boku b trojkąta: ");
+                    triangle.bokb = scanner.nextDouble();
+                    System.out.printf("Dlugosc obwodu wynosi: %.2f", triangle.isoscelesTriangleCircut());
+                }
+                break;
             case 0:
                 System.out.println("Wyjscie z programu");
                 petla = false;
